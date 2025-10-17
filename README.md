@@ -4,7 +4,7 @@ Esta aplicación es una calculadora simple desarrollada con **.NET MAUI** que pe
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Operaciones básicas: `+`, `-`, `*`, `/`
 - Cambio de signo `±`
@@ -15,7 +15,7 @@ Esta aplicación es una calculadora simple desarrollada con **.NET MAUI** que pe
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **.NET MAUI** (Multi-platform App UI)
 - **C#** para la lógica de la calculadora
