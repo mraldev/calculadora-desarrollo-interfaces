@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraChema.MainPage"
+             Title=""
+             BackgroundColor="#EFF5D2">
+
+    <!--Posibilidades:
+    Auto-se ajusta al contenido
+    *-ocupa todo lo posible
+    Actualmente hay creadas 6 filas y 5 columnas-->
+    <Grid RowDefinitions="*,*,*,*,*,*"
+          ColumnDefinitions="*,*,*,*,*"
+          Margin="10"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
+
+
+        <Border
+            Grid.ColumnSpan="5"
+            Stroke="Black"
+            Grid.Row="0" 
+            Grid.Column="0">
+
+            <Entry x:Name="lbPantalla"
+               Text="0"
+               FontSize="48"
+               HorizontalTextAlignment="End"
+               IsReadOnly="True"
+               TextColor="Black"
+               BackgroundColor="Transparent"/>
+        </Border>
+
+        <!--Botones-->
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="C"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnLimpiarClicked"
+            Grid.Row="1"
+            Grid.Column="0"/>
+
+        <Button
+            x:Name="btnPantallaMemoria"
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="0"
+            BackgroundColor="#CCCCCC" 
+            TextColor="Black"
+            IsEnabled="False"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"/>
+
+        <!--Botones de memoria-->
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="MC"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnMemoriaClicked"
+            Grid.Row="2"
+            Grid.Column="0"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="M+"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnMemoriaClicked"
+            Grid.Row="3"
+            Grid.Column="0"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="M-"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnMemoriaClicked"
+            Grid.Row="4"
+            Grid.Column="0"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="M"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnMemoriaClicked"
+            Grid.Row="5"
+            Grid.Column="0"/>
+
+        <!--Botones de números-->
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="7"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="2"
+            Grid.Column="1"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="4"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="3"
+            Grid.Column="1"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="1"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="4"
+            Grid.Column="1"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="±"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnCambiarSignoClicked"
+            Grid.Row="5"
+            Grid.Column="1"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="8"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="2"
+            Grid.Column="2"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="5"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="3"
+            Grid.Column="2"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="2"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="4"
+            Grid.Column="2"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="0"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="5"
+            Grid.Column="2"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="9"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="2"
+            Grid.Column="3"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="6"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="3"
+            Grid.Column="3"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="3"
+            TextColor="Black"
+            Clicked="OnNumeroClicked"
+            Grid.Row="4"
+            Grid.Column="3"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text=","
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnDecimalClicked"
+            Grid.Row="5"
+            Grid.Column="3"/>
+        
+        <!--Botones de operación-->
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="="
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnOperacionClicked"
+            Grid.Row="1"
+            Grid.Column="3"
+            Grid.ColumnSpan="2"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="/"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnOperacionClicked"
+            Grid.Row="2"
+            Grid.Column="4"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="*"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnOperacionClicked"
+            Grid.Row="3"
+            Grid.Column="4"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="-"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnOperacionClicked"
+            Grid.Row="4"
+            Grid.Column="4"/>
+
+        <Button
+            BorderColor="Black"
+            BorderWidth="3"
+            FontSize="30"
+            Text="+"
+            BackgroundColor="#556B2F" 
+            TextColor="Black"
+            Clicked="OnOperacionClicked"
+            Grid.Row="5"
+            Grid.Column="4"/>
+    </Grid>
+
+</ContentPage>
